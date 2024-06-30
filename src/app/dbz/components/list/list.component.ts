@@ -24,13 +24,17 @@ export class ListComponent  {
   // TODO: Emitir el ID del personaje
   onDeleteCharacter(index:number):void {
     //debugger;
+
     this.onNewDelete.emit(index);
     console.log({index});
 
   }
 
-  deleteCharacterById(character:Character):void{
-    this.deleteCharacterEmitById.emit(character.id);
+  deleteCharacterById(id?:string):void{
+
+    if(!id){return;}
+    console.log({id})
+    this.deleteCharacterEmitById.emit(id);
   }
 
 

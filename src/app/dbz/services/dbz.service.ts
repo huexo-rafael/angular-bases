@@ -28,7 +28,7 @@ export class DbzService {
 ];
 
 
-onNewCharacter(character: Character):void{
+addCharacter(character: Character):void{
 
    const newCharacter:Character={id:uuid(),...character}
 
@@ -40,8 +40,8 @@ onDeleteCharacter(index:number):void{
   this.characters.splice(index,1);
   console.log(this.characters)
 }*/
-deleteCharacterById(id:string){
-  debugger;
+deleteCharacterById(id?:string){
+  //debugger;
   this.characters=this.characters.filter(character=>character.id!=id);
 }
 
